@@ -141,6 +141,38 @@ body {
   font-family: "East Sea Dokdo","Sawarabi Mincho", sans-serif;
 }
 
+.font-sm {
+  font-size: 14px;
+}
+
+.font-md {
+  font-size: 17px;
+}
+
+.font-lr {
+  font-size: 17px;
+}
+
+.font-lg {
+  font-size: 25px;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.mb-sm {
+  margin-bottom: 16 !important;
+}
+
 @media (min-width: 480px) {
   /******************************************************************
 
@@ -163,6 +195,18 @@ Stylesheet: 600px以上のタブレットやモニタで適用
 Stylesheet: 960px以上のモニタで適用
 
 ******************************************************************/
+  .font-sm {
+    font-size: 16px;
+  }
+  .font-md {
+    font-size: 19px;
+  }
+  .font-lr {
+    font-size: 19px;
+  }
+  .font-lg {
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 1280px) {
