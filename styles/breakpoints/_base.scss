@@ -4,7 +4,11 @@ Stylesheet: ベーススタイル
 
 ******************************************************************/
 body {
-  font-family: "East Sea Dokdo","Sawarabi Mincho", sans-serif;
+  font-family: "East Sea Dokdo", "Sawarabi Mincho", sans-serif;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
 }
 .font-sm {
   font-size: 14px;
