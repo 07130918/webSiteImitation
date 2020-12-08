@@ -771,7 +771,7 @@ img {
   font-size: 17px;
 }
 
-.font-lr {
+.font-lr, .houses__title {
   font-size: 17px;
 }
 
@@ -779,7 +779,7 @@ img {
   font-size: 25px;
 }
 
-.mb-sm {
+.mb-sm, .houses__title {
   margin-bottom: 16px !important;
 }
 
@@ -795,7 +795,7 @@ img {
   margin-bottom: 80px !important;
 }
 
-.content-width {
+.content-width, .houses {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -808,6 +808,10 @@ img {
 
 .sub-title {
   color: #535353;
+}
+
+.houses__btn {
+  text-align: center;
 }
 
 @media (min-width: 480px) {
@@ -838,7 +842,7 @@ Stylesheet: 960px以上のモニタで適用
   .font-md {
     font-size: 19px;
   }
-  .font-lr {
+  .font-lr, .houses__title {
     font-size: 19px;
   }
   .font-lg, .main-title {

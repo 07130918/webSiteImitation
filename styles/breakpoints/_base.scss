@@ -48,3 +48,15 @@ img {
   @extend .font-sm;
   color: $cSubTitle;
 }
+
+.houses {
+  @extend .content-width;
+
+  &__title {
+    @extend .font-lr;
+    @extend .mb-sm;
+  }
+  &__btn {
+    text-align: center;
+  }
+}
