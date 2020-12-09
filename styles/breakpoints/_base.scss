@@ -54,6 +54,10 @@ img {
   flex-direction: column;
 }
 
+//section travel
+
+
+//section houses
 .houses {
   @extend .content-width;
 
@@ -71,6 +75,7 @@ img {
   }
 }
 
+//section popular
 .popular {
   &__inner {
     position: relative;
