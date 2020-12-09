@@ -7,12 +7,26 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   flex-direction: row;
   flex-wrap: wrap;
 }
+.travel {
+  &__inner {
+      padding: 50px;
+  }
+  &__texts,
+  &__img {
+      flex-basis: 47%;
+  }
+
+  &__texts {
+      display: flex;
+      align-items: flex-end;
+  }
+}
 .houses {
   &__item {
     flex-basis: 50%;
     margin-bottom: 60px;
   }
-} 
+}
 .popular {
   &__container {
     justify-content: space-between;
@@ -20,4 +34,4 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   &__item {
     flex-basis: 47%;
   }
-} 
+}
