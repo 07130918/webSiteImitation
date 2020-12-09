@@ -72,16 +72,25 @@ img {
 }
 
 .popular {
+  &__inner {
+    position: relative;
+    @include p-base($top: 10%, $height: 90%) {
+      background: $cBgGray;
+    }
+  }
+
   &__header {
     @extend .content-width;
   }
   &__container {
+    position: relative;
+    z-index: 2;
     @extend .flex;
     @extend .content-width;
     @extend .pb-sm;
   }
   &__title {
-    @extend .font-lr;
+    @extend .font-md;
     @extend .mb-sm;
   }
   &__btn {
