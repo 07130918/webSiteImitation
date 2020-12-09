@@ -39,6 +39,7 @@ img {
   margin: 0 auto;
   max-width: $contentMaxWidth;
 }
+
 .main-title {
   @extend .font-lg;
   font-weight: 600;
@@ -67,5 +68,35 @@ img {
   &__btn {
     text-align: center;
     flex-basis: 100%;
+  }
+}
+
+.popular {
+  &__header {
+    @extend .content-width;
+  }
+  &__container {
+    @extend .flex;
+    @extend .content-width;
+    @extend .pb-sm;
+  }
+  &__title {
+    @extend .font-lr;
+    @extend .mb-sm;
+  }
+  &__btn {
+    text-align: center;
+    flex-basis: 100%;
+  }
+  &__img {
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+    & > img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
