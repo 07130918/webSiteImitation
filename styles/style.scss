@@ -5,7 +5,7 @@
 @import 'modules/text-animation';
 @import 'modules/image-slide';
 
-@import "breakpoints/base";
+@import "./breakpoints/base";
 
 @media (min-width: 480px) {
   @import "breakpoints/480up";
