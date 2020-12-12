@@ -789,7 +789,7 @@ body {
   display: block;
   margin-top: 30px;
   color: black;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .menu-open #container {
@@ -797,6 +797,11 @@ body {
           transform: translate(-300px);
   -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
           box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+}
+
+.menu-open .mobile-menu .logo {
+  padding: 0 40px;
+  font-size: 38px;
 }
 
 .menu-open .mobile-menu__cover {
