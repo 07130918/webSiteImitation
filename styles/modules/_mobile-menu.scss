@@ -37,6 +37,7 @@ $cMenuOpen: $cBlack;
         visibility: hidden;
         transition: opacity 1s;
         cursor: pointer;
+        z-index: 200;
     }
     &__main {
         padding: 0;
@@ -62,8 +63,8 @@ $cMenuOpen: $cBlack;
 //toggleでクラスがついたり消えたり
 .menu-open {
     & #container {
+      // _base.scss#containerと連携
         transform: translate(-300px);
-        transition: transform 0.3s;
         box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
     }
     

@@ -64,6 +64,14 @@ img {
   padding-top: $navHeight;
 }
 
+#container {
+  background-color: $cWhite;
+  position: relative;
+  z-index: 10;
+  // _mobile-menu.scss .menu-open#containerと連携
+  transition: transform 0.3s, box-shadow 0.5s;
+}
+
 .header {
   position: fixed;
   top: 0;

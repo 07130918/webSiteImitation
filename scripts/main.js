@@ -32,4 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 何回スクロールしてもトリガーが外れないように{once: false}
   const so3 = new ScrollObserver(".nav-trigger", _navAnimation, {once: false});
+
+  new MobileMenu();
+
 });
