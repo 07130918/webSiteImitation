@@ -3,7 +3,7 @@
 Stylesheet: ベーススタイル
 
 ******************************************************************/
-//material
+//material 変数
 body {
   font-family: "East Sea Dokdo", "Kosugi Maru", sans-serif;
 }
@@ -57,6 +57,70 @@ img {
 }
 .purple {
   color: $cWineRed;
+}
+//---------
+
+#content {
+  padding-top: $navHeight;
+}
+
+#container {
+  background-color: $cWhite;
+  position: relative;
+  z-index: 10;
+  // _mobile-menu.scss .menu-open#containerと連携
+  transition: transform 0.3s, box-shadow 0.5s;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navHeight;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+
+  &.triggered {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 0 25px -10px rgba(255, 255, 255, 0.5);
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__ul {
+    @extend .flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__li {
+    margin-left: 20px;
+
+    & > a {
+      color: $cBlack;
+      text-decoration: none !important;
+      text-transform: uppercase;
+    }
+  }
+
+  & .logo {
+    font-size: 38px;
+    justify-content: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
 }
 
 //section travel
