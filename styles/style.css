@@ -1175,6 +1175,36 @@ img {
           justify-content: center;
 }
 
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.side.left {
+  left: 50px;
+}
+
+.side.left.side__inner {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.side.right {
+  right: 50px;
+}
+
+.side.right.side__inner {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
 @media (min-width: 480px) {
   /******************************************************************
 
@@ -1302,6 +1332,9 @@ Stylesheet: 1280px以上のモニタで適用
   .popular__item {
     -ms-flex-preferred-size: 23%;
         flex-basis: 23%;
+  }
+  .side {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */

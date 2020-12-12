@@ -291,3 +291,30 @@ img {
     justify-content: center;
   }
 }
+
+//sideのリンク及びコピーライト
+.side {
+  display: none;
+  position: fixed;
+  top: 70%;
+  transform: translateY(-50%);
+
+  &.left {
+    left: 50px;
+
+    &.side__inner {
+      transform: rotate(-90deg);
+      transform-origin: top left;
+    }
+
+  }
+
+  &.right {
+    right: 50px;
+
+    &.side__inner {
+      transform: rotate(90deg);
+      transform-origin: top right;
+    }
+  }
+}
