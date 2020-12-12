@@ -28,6 +28,12 @@ Stylesheet: 960px以上のモニタで適用
   }
 }
 
+.mobile-menu {
+  &__btn {
+    display: none;
+  }
+}
+
 .travel {
   &__img {
     height: 400px;
@@ -49,5 +55,11 @@ Stylesheet: 960px以上のモニタで適用
   }
   &__img {
     height: 335px;
+  }
+}
+
+.footer {
+  &__li {
+    justify-content: flex-start;
   }
 }

@@ -925,7 +925,7 @@ img {
   color: #535353;
 }
 
-.flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
+.flex, .header__ul, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -937,6 +937,10 @@ img {
 
 .purple {
   color: #904669;
+}
+
+#content {
+  padding-top: 100px;
 }
 
 .header {
@@ -957,6 +961,32 @@ img {
 
 .header__nav {
   display: none;
+}
+
+.header__ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header__li {
+  margin-left: 20px;
+}
+
+.header__li > a {
+  color: black;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+.header .logo {
+  font-size: 38px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header__inner {
@@ -1141,7 +1171,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
-  .flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
+  .flex, .header__ul, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1213,13 +1243,19 @@ Stylesheet: 960px以上のモニタで適用
   .pb-sm, .travel__texts, .popular__container {
     margin-bottom: 150px !important;
   }
-  .header .travel__img {
+  .header__nav {
+    display: block;
+  }
+  .mobile-menu__btn {
+    display: none;
+  }
+  .travel__img {
     height: 400px;
   }
-  .header .travel__description {
+  .travel__description {
     margin-bottom: 40px;
   }
-  .header .travel__title::before {
+  .travel__title::before {
     display: block;
   }
   .popular__item {
@@ -1228,6 +1264,11 @@ Stylesheet: 960px以上のモニタで適用
   }
   .popular__img {
     height: 335px;
+  }
+  .footer__li {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
