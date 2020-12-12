@@ -298,6 +298,12 @@ img {
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
+  color: $cBlack;
+
+  & a {
+    color: $cBlack;
+    text-decoration: none !important;
+  }
 
   &.left {
     left: 50px;
