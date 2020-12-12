@@ -22,6 +22,12 @@ Stylesheet: 960px以上のモニタで適用
   margin-bottom: 150px !important;
 }
 
+.header {
+  &__nav {
+    display: block;
+  }
+}
+
 .travel {
   &__img {
     height: 400px;

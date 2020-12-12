@@ -3,7 +3,7 @@
 Stylesheet: ベーススタイル
 
 ******************************************************************/
-//material
+//material 変数
 body {
   font-family: "East Sea Dokdo", "Kosugi Maru", sans-serif;
 }
@@ -58,6 +58,7 @@ img {
 .purple {
   color: $cWineRed;
 }
+//---------
 
 .header {
   position: fixed;
@@ -69,6 +70,17 @@ img {
   display: flex;
   align-items: center;
   z-index: 100;
+
+  &__nav {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .content-width;
+  }
 }
 
 //section travel

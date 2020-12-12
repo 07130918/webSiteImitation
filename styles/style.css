@@ -909,7 +909,7 @@ img {
   padding-bottom: 80px !important;
 }
 
-.content-width, .travel, .houses, .popular__header, .popular__container, .footer {
+.content-width, .header__inner, .travel, .houses, .popular__header, .popular__container, .footer {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -953,6 +953,22 @@ img {
       -ms-flex-align: center;
           align-items: center;
   z-index: 100;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .travel__inner {
@@ -1197,13 +1213,13 @@ Stylesheet: 960px以上のモニタで適用
   .pb-sm, .travel__texts, .popular__container {
     margin-bottom: 150px !important;
   }
-  .travel__img {
+  .header .travel__img {
     height: 400px;
   }
-  .travel__description {
+  .header .travel__description {
     margin-bottom: 40px;
   }
-  .travel__title::before {
+  .header .travel__title::before {
     display: block;
   }
   .popular__item {
