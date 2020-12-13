@@ -216,6 +216,7 @@ body {
 
 .hero {
   overflow: hidden;
+  padding-top: 100px;
 }
 
 .hero__title {
@@ -899,7 +900,7 @@ img {
   margin-bottom: 16px !important;
 }
 
-.mb-lg, .travel {
+.mb-lg, .travel, .houses, .houses__btn, .popular__btn {
   margin-bottom: 80px !important;
 }
 
@@ -907,7 +908,7 @@ img {
   padding-bottom: 16px !important;
 }
 
-.pb-lg {
+.pb-lg, .hero {
   padding-bottom: 80px !important;
 }
 
@@ -927,7 +928,7 @@ img {
   color: #535353;
 }
 
-.flex, .header__ul, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
+.flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,10 +940,6 @@ img {
 
 .purple {
   color: #904669;
-}
-
-#content {
-  padding-top: 100px;
 }
 
 #main-content {
@@ -983,8 +980,8 @@ main {
 
 .header.triggered {
   background-color: rgba(255, 255, 255, 0.9);
-  -webkit-box-shadow: 10px 0 25px -10px rgba(255, 255, 255, 0.5);
-          box-shadow: 10px 0 25px -10px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 0 25px -10px rgba(0, 0, 0, 0.5);
 }
 
 .header__nav {
@@ -992,6 +989,9 @@ main {
 }
 
 .header__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1194,60 +1194,22 @@ main {
   color: black;
 }
 
-.side a, .side span {
-  color: black;
-  text-decoration: none !important;
-  margin: 0 40px;
-  vertical-align: middle;
-}
-
-.side.left {
-  left: 50px;
-}
-
-.side.left.side__inner {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
-}
-
 .side.right {
   right: 50px;
 }
 
 .side.right.side__inner {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
   -webkit-transform-origin: top right;
           transform-origin: top right;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
-.icon {
-  position: relative;
-}
-
-.icon::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: -20px;
-  width: 1em;
-  height: 1em;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.icon.twitter::before {
-  background-image: url(../images/twitter.svg);
-}
-
-.icon.fb::before {
-  background-image: url(../images/facebook.svg);
+.side.right span {
+  color: black;
+  text-decoration: none !important;
+  margin: 0 40px;
+  vertical-align: middle;
 }
 
 @media (min-width: 480px) {
@@ -1264,7 +1226,7 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
-  .flex, .header__ul, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
+  .flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1330,7 +1292,7 @@ Stylesheet: 960px以上のモニタで適用
   .font-lg, .main-title {
     font-size: 36px;
   }
-  .mb-lg, .travel {
+  .mb-lg, .travel, .houses, .houses__btn, .popular__btn {
     margin-bottom: 150px !important;
   }
   .pb-sm, .travel__texts, .popular__container {
@@ -1341,6 +1303,10 @@ Stylesheet: 960px以上のモニタで適用
   }
   .mobile-menu__btn {
     display: none;
+  }
+  .swiper-slide {
+    -webkit-box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
+            box-shadow: 0 8px 40px -10px rgba(0, 0, 0, 0.8);
   }
   .travel__img {
     height: 400px;
