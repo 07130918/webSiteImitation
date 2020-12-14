@@ -1,38 +1,86 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const hero = new HeroSlider(".swiper-container");
-  hero.start();
+  const main = new Main();
+  console.log(main);
+});
 
-  const cb = function (el, inview) {
-    if (inview) {
-      const ta = new TweenTextAnimation(el);
-      ta.animate();
-    }
-  };
+class Main {
+  constructor() {
+    this.header = document.querySelector(".header");
+    this.sides = document.querySelectorAll(".side");
+    this._observers = [];
+    this._init();
+  }
 
-  const _inviewAnimation = function (el, inview) {
+  set observers(val) {
+    this._observers.push(val);
+  }
+
+  get observers() {
+    return this._observers;
+  }
+
+  _init() {
+    new MobileMenu();
+    this.hero = new HeroSlider(".swiper-container");
+    Pace.on("done", this._pacedone.bind(this));
+  }
+
+  _pacedone() {
+    // ロードが完了したらアニメーション動作をトリガー
+    this._scrollInit();
+  }
+
+  _inviewAnimation(el, inview) {
     if (inview) {
       el.classList.add("inview");
     } else {
       el.classList.remove("inview");
     }
-  };
+  }
 
-  const so = new ScrollObserver(".tween-animate-title", cb);
-
-  const so2 = new ScrollObserver(".cover-slide", _inviewAnimation);
-
-  const header = document.querySelector(".header");
-  const _navAnimation = function (el, inview) {
+  _navAnimation(el, inview) {
     if (inview) {
-      header.classList.remove("triggered");
+      this.header.classList.remove("triggered");
     } else {
-      header.classList.add("triggered");
+      this.header.classList.add("triggered");
     }
-  };
+  }
+  _sideAnimation(el, inview) {
+    if (inview) {
+      this.sides.forEach(side => side.classList.add("inview"))
+    } else {
+      this.sides.forEach(side => side.classList.remove("inview"))
+    }
+  }
 
-  // 何回スクロールしてもトリガーが外れないように{once: false}
-  const so3 = new ScrollObserver(".nav-trigger", _navAnimation, {once: false});
+  _textAnimation(el, inview) {
+    if (inview) {
+      const ta = new TweenTextAnimation(el);
+      ta.animate();
+    }
+  }
 
-  new MobileMenu();
+  _toggleSlideAnimation(el, inview) {
+    if (inview) {
+      this.hero.start();
+    } else {
+      this.hero.stop();
+    }
+  }
 
-});
+  _scrollInit() {
+    // 何回スクロールしてもトリガーが外れないように{once: false}
+    // set
+    this.observers = new ScrollObserver(
+      ".nav-trigger",
+      this._navAnimation.bind(this),
+      { once: false }
+    );
+
+    this.observers = new ScrollObserver(".cover-slide", this._inviewAnimation);
+    this.observers = new ScrollObserver(".appear", this._inviewAnimation);
+    this.observers = new ScrollObserver("#main-content", this._sideAnimation.bind(this), {once: false, rootMargin: "-300px 0px"});
+    this.observers = new ScrollObserver(".tween-animate-title", this._textAnimation, {rootMargin: "-100px 0px"});
+    this.observers = new ScrollObserver(".swiper-container", this._toggleSlideAnimation.bind(this), { once: false });
+  }
+}

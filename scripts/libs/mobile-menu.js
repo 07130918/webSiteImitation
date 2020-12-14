@@ -6,8 +6,6 @@ class MobileMenu {
       this.DOM.container = document.querySelector('#global-container');
       this.eventType = this._getEventType();
       this._addEvent();
-      console.log(this)
-      console.log(this.DOM)
   }
 
   _getEventType() {

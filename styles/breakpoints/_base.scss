@@ -183,7 +183,7 @@ main {
 
   &__texts {
     @extend .pb-sm;
-
+     
     &.inview {
       & .travel__title::before {
         transform: translateY(-50%);
@@ -306,19 +306,25 @@ main {
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
+  transition: all 0.6s ease-in;
   color: $cBlack;
   
   &.right {
-    right: 50px;
+    right: -50px;
+
+    &.inview {
+      right: 50px;
+    }
     
     &.side__inner {
       transform-origin: top right;
       transform: rotate(90deg);
     }
-    & span {
+    & .tween-animate-title {
       color: $cBlack;
       text-decoration: none !important;
       margin: 0 40px;
+      letter-spacing: 2px;
       vertical-align: middle;
     }
   }
